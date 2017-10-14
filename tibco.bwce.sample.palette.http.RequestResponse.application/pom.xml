@@ -43,18 +43,6 @@
       </plugin>
       <plugin>
         <groupId>io.fabric8</groupId>
-        <artifactId>fabric8-maven-plugin</artifactId>
-        <!--       <executions>
-          <execution>
-            <goals>
-              <goal>resource</goal>
-              <goal>build</goal>
-            </goals>
-          </execution>
-        </executions>-->
-      </plugin>
-      <plugin>
-        <groupId>io.fabric8</groupId>
         <artifactId>docker-maven-plugin</artifactId>
         <version>0.14.2</version>
         <configuration>
@@ -89,7 +77,7 @@
       <plugin>
         <groupId>io.fabric8</groupId>
         <artifactId>fabric8-maven-plugin</artifactId>
-        <version>2.2.102</version>
+        <version>3.5.28</version>
         <configuration>
           <skip>false</skip>
         </configuration>
