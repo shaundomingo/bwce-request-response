@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Tibco BWCE Sample Palette Http RequestResponse Application
-Bundle-SymbolicName: tibco.bwce.sample.palette.http.RequestResponse.application
+Bundle-Name: Request and Response Demo App
+Bundle-SymbolicName: tbwce-request-response
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: TIBCO Software Inc.
 TIBCO-BW-Version: 1.2.0 V19 2014-10-01

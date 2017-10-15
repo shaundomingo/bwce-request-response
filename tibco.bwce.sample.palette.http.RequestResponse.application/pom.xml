@@ -79,7 +79,40 @@
         <artifactId>fabric8-maven-plugin</artifactId>
         <version>3.5.28</version>
         <configuration>
+          <mode>openshift</mode>
+          <autoPull>true</autoPull>
           <skip>false</skip>
+          <buildStrategy>docker</buildStrategy>
+          <images>
+            <image>
+              <alias>${bwdocker.containername}</alias>
+              <name>${docker.image}</name>
+              <build>
+                <from>${bwdocker.from}</from>
+                <maintainer>${bwdocker.maintainer}</maintainer>
+                <assembly>
+                  <basedir>/</basedir>
+                  <descriptorRef>artifact</descriptorRef>
+                </assembly>
+                <tags>
+                  <tag>latest</tag>
+                </tags>
+                <ports>
+                  <port>8080</port>
+                </ports>
+              </build>
+              <run>
+                <namingStrategy>alias</namingStrategy>
+              </run>
+            </image>
+          </images>
+		  <enricher>
+		    <config>
+		      <fmp-service>
+		        <name>tbwce-request-response</name> <!-- by default uses the artifact id which is too long -->
+		      </fmp-service>
+		    </config>
+		  </enricher>
         </configuration>
       </plugin>
     </plugins>
